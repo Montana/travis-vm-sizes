@@ -1,0 +1,28 @@
+language: python
+group: edge
+
+jobs:
+  include:
+     - dist: focal
+       script: python3 hello.py
+        - echo "Threads/core $(nproc --all)"
+        - free -g
+     - dist: focal
+       vm:
+         size: medium
+       script: python3 hello.py
+        - echo "Threads/core $(nproc --all)"
+        - free -g
+     - dist: focal
+       vm:
+         size: large
+       script: python3 hello.py
+        - echo "Threads/core $(nproc --all)"
+        - free -g
+     - dist: focal
+       vm: python3 hello.py
+         size: x-large
+       script: python hello.py
+        - echo "Threads/core $(nproc --all)"
+        - free -g
+   
