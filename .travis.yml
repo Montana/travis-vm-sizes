@@ -1,28 +1,28 @@
 language: python
-group: edge
+install: skip
 
 jobs:
   include:
      - dist: focal
-       script: python3 hello.py
+       script: 
         - echo "Threads/core $(nproc --all)"
         - free -g
      - dist: focal
        vm:
          size: medium
-       script: python3 hello.py
+       script: 
         - echo "Threads/core $(nproc --all)"
         - free -g
      - dist: focal
        vm:
          size: large
-       script: python3 hello.py
+       script: 
         - echo "Threads/core $(nproc --all)"
         - free -g
      - dist: focal
-       vm: python3 hello.py
+       vm:
          size: x-large
-       script: python hello.py
+       script: 
         - echo "Threads/core $(nproc --all)"
         - free -g
    
