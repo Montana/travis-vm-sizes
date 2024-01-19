@@ -25,3 +25,10 @@ jobs:
        script: 
         - echo "Threads/core $(nproc --all)"
         - free -g
+    - dist: focal
+       vm:
+         size: 2x-large
+       script: 
+        - echo "Threads/core $(nproc --all)"
+        - free -g
+
