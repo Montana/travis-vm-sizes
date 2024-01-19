@@ -19,7 +19,7 @@ jobs:
        script: 
         - echo "Threads/core $(nproc --all)"
         - free -g
-     - dist: focal
+    - dist: focal
        vm:
          size: x-large
        script: 
